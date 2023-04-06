@@ -1,4 +1,10 @@
 {
     "WillLuke.nextjs.addTypesOnSave": true,
-    "WillLuke.nextjs.hasPrompted": true
+    "WillLuke.nextjs.hasPrompted": true,
+    "cSpell.words": [
+        "curret",
+        "NEXTAUTH",
+        "prismadb",
+        "tailwindcss"
+    ]
 }
