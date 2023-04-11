@@ -4,7 +4,7 @@ import Input from "../components/input";
 import { signIn } from "next-auth/react";
 import { FcGoogle } from "react-icons/fc";
 import { FaGithub } from "react-icons/fa";
-import { NextPageContext } from "next";
+import { NextPageContext, InferGetServerSidePropsType } from "next";
 import { getSession } from "next-auth/react";
 
 export async function getServerSideProps(context: NextPageContext) {
@@ -24,7 +24,7 @@ export async function getServerSideProps(context: NextPageContext) {
   }
 }
 
-const Auth = () => {
+const Auth = (props: InferGetServerSidePropsType<typeof getServerSideProps>) => {
 
   const [email, setEmail] = useState("");
   const [name, setName] = useState("");
