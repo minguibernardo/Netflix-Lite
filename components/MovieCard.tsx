@@ -2,6 +2,7 @@
 import React from "react";
 import { BsFillPlayFill } from "react-icons/bs";
 import { FaChevronDown } from "react-icons/fa";
+import FavoriteButton from "./FavoriteButton";
 interface MovieCardProps {
   data: Record<string, any>;
 }
@@ -54,6 +55,7 @@ const MovieCard: React.FC<MovieCardProps> = ({ data }) => {
           <div className="flex items-center justify-center w-6 h-6 transition bg-white rounded-full cursor-pointer lg:w-10 lg:h-10 hover:bg-neutral-300">
             <BsFillPlayFill className="w-4 text-black lg:w-6" />
           </div>
+          <FavoriteButton movieId={data?.id}/>
        
           <div className="flex items-center justify-center w-6 h-6 ml-auto transition border-2 border-white rounded-full cursor-pointer group/item lg:w-10 lg:h-10 hover:border-neutral-300">
             <FaChevronDown className="w-4 text-white group-hover/item:text-neutral-300 lg:w-6" />
